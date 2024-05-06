@@ -7,7 +7,6 @@ app = Flask(__name__)
 bootstrap = Bootstrap(app)
 model = []
 
-
 @app.route("/")
 def index():
     return render_template('index.html')
@@ -56,6 +55,15 @@ def pets(status: str = "available"):
     return render_template('pets.html', value=data)
 
 
+
+@app.route('/store', methods=['GET'])
+def store():
+    response = requests.get('https://petstore.swagger.io/v2/store/inventory')
+    store = []
+    for row in response.json():
+        print(row)
+        store.append(row)
+    return render_template('store.html', value=store)
 
 @app.route('/pet_update/<id_pet>', methods=['GET'])
 def pet_update(id_pet):

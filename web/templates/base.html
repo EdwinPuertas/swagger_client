@@ -1,6 +1,6 @@
 {% extends "bootstrap/base.html" %}
 
-{% block title %}REST Client Application{% endblock %}
+{% block title %}Swagger Petstore Application{% endblock %}
 
 {% block navbar %}
 <div class="navbar navbar-inverse" role="navigation">
@@ -19,7 +19,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="/">Home</a></li>
                 <li><a href="/pets">Pets</a></li>
-                <li><a href="/">Store</a></li>
+                <li><a href="/store">Store</a></li>
                 <li><a href="/">User</a></li>
             </ul>
         </div>
@@ -29,13 +29,15 @@
 
 {% block content %}
 <div class="container">
-    {% block page_content %}{% endblock %}
+    {% block page_content %}
+
+    {% endblock %}
 </div>
 {% endblock %}
+
+{% block footer %}
         <footer class="footer">
-            <p>© Company 2020</p>
+            <p>© Company 2024</p>
         </footer>
-
-
-
+{% endblock %}
 

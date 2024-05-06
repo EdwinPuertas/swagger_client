@@ -2,15 +2,13 @@
 
 {% block page_content %}
 
-<h2>Pets</h2>
+<h2>Store</h2>
 
-<a href="/new_pet" class="btn btn-success float-right">Add New Pet</a>
+<a href="/new_pet" class="btn btn-success float-right">Add New store</a>
 <table class="table">
   <thead class="thead-dark">
     <tr>
-        <th scope="col">Id</th>
         <th scope="col">Name</th>
-        <th scope="col">Status</th>
         <th scope="col">Edit</th>
         <th scope="col">Delete</th>
     </tr>
@@ -18,9 +16,7 @@
   <tbody>
   {% for line in value %}
     <tr>
-        <th scope="row">{{line['id']}}</th>
-        <td>{{line['name']}}</td>
-        <td>{{line['status']}}</td>
+        <th scope="row">{{line}}</th>
         <td>
             <a href="/pet_update/{{line['id']}}" class="btn btn-warning btn-xs">Edit</a>
         </td>
